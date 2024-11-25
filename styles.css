@@ -1,0 +1,264 @@
+/* Carousel image styling */
+.carousel-item img {
+  height: 500px; /* Set the height to 500px */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  width: 100%; /* Ensure the image takes up the full width */
+}
+
+/* Fixed navbar styling */
+.navbar-custom {
+  background-color: #2c3e50; /* Dark background for the navbar */
+  position: fixed; /* Makes the navbar fixed to the top */
+  top: 0; /* Stick the navbar at the top of the page */
+  left: 0; /* Align the navbar to the left */
+  width: 100%; /* Ensure the navbar spans the entire width of the page */
+  z-index: 1000; /* Ensure it stays on top of other content */
+  padding: 10px 0; /* Add some padding for better spacing */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for a floating effect */
+}
+
+/* Navbar text colors */
+.navbar-custom .navbar-brand {
+  color: #ecf0f1; /* Light color for the brand */
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  color: #ecf0f1; /* Light color for the links */
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+  color: #3498db; /* Highlight color on hover */
+}
+
+.navbar-custom .navbar-toggler-icon {
+  background-color: #ecf0f1; /* Light icon for the toggler */
+}
+
+/* About Us section styling */
+.about-section {
+  background-color: #f1f1f1; /* Light background color */
+  padding: 30px 0; /* Add padding for spacing */
+  text-align: center; /* Center-align text */
+  border-radius: 10px; /* Rounded corners */
+  margin-top: 0px; /* Add some top margin to prevent content from being hidden behind the fixed navbar */
+}
+
+.about-section h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333; /* Dark text color */
+}
+
+.about-section p {
+  font-size: 18px;
+  color: #555; /* Slightly lighter text color */
+  line-height: 1.6; /* Improve line spacing */
+  max-width: 800px;
+  margin: 0 auto; /* Center the text block */
+}
+
+.about-section.bg-image {
+ /* background-image: url('https://via.placeholder.com/1600x600');  Replace with your own image */
+ background-color: azure;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+/* Initial hidden state */
+.card-item {
+    opacity: 0;
+    transform: translateY(50px); /* Start with the cards below */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Animation when cards appear */
+.card-item.visible {
+    opacity: 1;
+    transform: translateY(0); /* Move cards into position */
+}
+
+/* Optional: Styling for the cards and icons */
+.card-body {
+    background-color: #f7f7f7;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card-body i {
+    color: #3498db;
+}
+/* Section Background and Padding */
+#mission-vision-section {
+  background-color: #f7f7f7; /* Light grey background */
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* Card Styling */
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height:300px;
+}
+
+/* Card Body Styling */
+.card-body {
+  background-color: #ffffff; /* White background for cards */
+  padding: 30px;
+  text-align: center;
+}
+
+/* Icon Styling */
+.card-body i {
+  color: #3498db; /* Blue icon color */
+  margin-bottom: 15px;
+}
+
+/* Card Title Styling */
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Text Styling */
+.card-text {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .card-body {
+      padding: 20px;
+  }
+  .card-title {
+      font-size: 20px;
+  }
+  .card-text {
+      font-size: 14px;
+  }
+}
+
+/* Floating buttons container */
+.floating-buttons {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999; /* Ensure it stays on top */
+}
+
+/* Common button styling */
+.floating-buttons .btn {
+  display: inline-block;
+  width: 65px;
+  height: 65px;
+  background-color: #007bff; /* Default blue color for phone */
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 35px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+  transition: transform 0.3s ease;
+  animation: bounce 1.5s ease-in-out infinite; /* Bounce animation for both buttons */
+}
+.floating-buttons .btns {
+  display: inline-block;
+  width: 65px;
+  height: 65px;
+  background-color: #007bff; /* Default blue color for phone */
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  line-height: 60px;
+  font-size: 35px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+  transition: transform 0.5s ease;
+  animation: bounce 2s ease-in-out infinite; /* Bounce animation for both buttons */
+}
+/* Phone button specific */
+.floating-buttons .phone-btn {
+  background-color: #007bff; /* Blue */
+  margin-right: -70px;
+    margin-top: 157px;
+
+}
+
+/* WhatsApp button specific */
+.floating-buttons .whatsapp-btn {
+  background-color: #25d366; /* WhatsApp Green */
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Start and end at original position */
+  }
+  50% {
+    transform: translateY(-10px); /* Move up 10px */
+  }
+}
+
+/* Optional: On hover, increase button size */
+.floating-buttons .btn:hover {
+  transform: scale(1.1); /* Slightly increase button size on hover */
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #2c3e50; /* Dark background color */
+  color: #f8f9fa; /* Light text color */
+}
+
+.footer a {
+  color: #f8f9fa; /* Light color for links */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #3498db; /* Hover color for links */
+}
+
+.footer h5 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Social media buttons */
+.footer .btn {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.footer .btn:hover {
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+  background-color: #3498db;
+}
+
+/* Responsive Layout for smaller screens */
+@media (max-width: 768px) {
+  .footer .col-md-4 {
+      text-align: center;
+  }
+  .footer .col-md-4 + .col-md-4 {
+      margin-top: 20px;
+  }
+}
